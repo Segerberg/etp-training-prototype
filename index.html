@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Pre-Ingest ESS</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/freelancer.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  
+    <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">Pre-Ingest</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#pre-agreement">Agreement Processing</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#data-extraction"></i>Data Extraction</a>
+      </li>
+	     <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#prepare-ip">Prepare IP</a>
+      </li>
+	  <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#create-sip">Create SIP</a>
+      </li>
+	  <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#sip-security-check">SIP Security Check</a>
+      </li>
+	  <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#sip-validation">(S)IP Validation</a>
+      </li>
+	    <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#submit-sip">Submit SIP</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container">
+	<h1 class="mb-0">ESSArch</h1>
+	<br>
+      <h2 class="font-weight-light mb-0">Tools for producers - Training</h2>
+    </div>
+	<br>
+	<br>
+	<br>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1499" height="180" viewBox="188 460 1499 180" version="1.1"><defs><marker id="sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto"><path d="M 1 5 L 11 10 L 1 15 Z" style="fill: black; stroke-width: 1px; stroke-linecap: round; stroke-dasharray: 10000, 1; stroke: black;"/></marker><marker id="sequenceflow-end-#fff-#000-3mn9lj1fze13659mh12rwlmcs" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto"><path d="M 1 5 L 11 10 L 1 15 Z" style="fill: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: round; stroke-dasharray: 10000, 1; stroke: rgb(0, 0, 0);"/></marker></defs><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_0yyovmv" style="display: block;"><g class="djs-visual"><path d="m  1586,534L1634,534 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="1586,534 1634,534 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1580" y="528" width="60" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_0ndewfu" style="display: block;"><g class="djs-visual"><path d="m  224,534L260,534 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="224,534 260,534 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="218" y="528" width="48" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_0njkwv0" style="display: block;"><g class="djs-visual"><path d="m  1210,574L1210,604 L1634,604 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="1210,574 1210,604 1634,604 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1204" y="568" width="436" height="42" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_1r24uf1" style="display: block;"><g class="djs-visual"><path d="m  1424,534L1486,534 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="1424,534 1486,534 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1418" y="528" width="74" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_1e14cfh" style="display: block;"><g class="djs-visual"><path d="m  360,534L393,534 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="360,534 393,534 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="354" y="528" width="45" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_0mk15vt" style="display: block;"><g class="djs-visual"><path d="m  780,534L831,534 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="780,534 831,534 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="774" y="528" width="63" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_0jqp7mm" style="display: block;"><g class="djs-visual"><path d="m  1356,494L1356,466 L898,466 L898,494 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="1356,494 1356,466 898,466 898,494 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="892" y="460" width="470" height="40" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_106jw36" style="display: block;"><g class="djs-visual"><path d="m  931,534L995,534 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="931,534 995,534 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="925" y="528" width="76" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_0c8yyn1" style="display: block;"><g class="djs-visual"><path d="m  631,534L680,534 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="631,534 680,534 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="625" y="528" width="61" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_0b0ggz3" style="display: block;"><g class="djs-visual"><path d="m  1095,534L1128,534 L1160,534 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="1095,534 1128,534 1160,534 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1089" y="528" width="77" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_1ojyz0s" style="display: block;"><g class="djs-visual"><path d="m  1260,534L1324,534 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="1260,534 1324,534 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1254" y="528" width="76" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection selected" data-element-id="SequenceFlow_0zom1o4" style="display: block;"><g class="djs-visual"><path d="m  493,534L531,534 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-3mn9lj1fze13659mh12rwlmcs');"/></g><polyline points="493,534 531,534 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="487" y="528" width="50" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="EndEvent_0khm20q" style="display: block;" transform="translate(1634 519)"><g class="djs-visual"><circle cx="15" cy="15" r="15" style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255); fill-opacity: 0.95;"/></g><rect x="0" y="0" width="30" height="30" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="42" height="42" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="StartEvent_1xlf58m" style="display: block;" transform="translate(194 519)"><g class="djs-visual"><circle cx="15" cy="15" r="15" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/></g><rect x="0" y="0" width="30" height="30" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="42" height="42" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="EndEvent_128u848" style="display: block;" transform="translate(1634 589)"><g class="djs-visual"><circle cx="15" cy="15" r="15" style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255); fill-opacity: 0.95;"/></g><rect x="0" y="0" width="30" height="30" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="42" height="42" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="SubProcess_1j7cvp2" style="display: block;" transform="translate(1486 494)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;"><tspan x="19.9921875" y="43.599999999999994">Submit SIP </tspan></text><rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/><path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/></g><rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="SubProcess_0iui92y" style="display: block;" transform="translate(260 494)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;"><tspan x="8.984375" y="36.4">Pre-Agreement</tspan><tspan x="20.15625" y="50.8">Processing</tspan></text><rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/><path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/></g><rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="SubProcess_0jfijpj" style="display: block;" transform="translate(831 494)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;"><tspan x="21.3203125" y="43.599999999999994">Prepare IP</tspan></text><rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/><path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/></g><rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="SubProcess_1ts4h3u" style="display: block;" transform="translate(680 494)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;"><tspan x="37.1640625" y="36.4">Data</tspan><tspan x="23.1640625" y="50.8">Extraction</tspan></text><rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/><path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/></g><rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="SubProcess_1qr61dt" style="display: block;" transform="translate(995 494)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;"><tspan x="20.65625" y="43.599999999999994">Create SIP</tspan></text><rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/><path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/></g><rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="SubProcess_0bkeras" style="display: block;" transform="translate(531 494)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;"><tspan x="14.15625" y="29.200000000000003">Prepare Data</tspan><tspan x="6.484375" y="43.6">Selection Profile</tspan><tspan x="37.6640625" y="58">DSP</tspan></text><rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/><path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/></g><rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="SubProcess_0py0zet" style="display: block;" transform="translate(393 494)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;"><tspan x="8.375" y="29.200000000000003">Define Transfer</tspan><tspan x="12.4921875" y="43.6">Project Profile</tspan><tspan x="38.3359375" y="58">TPP</tspan></text><rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/><path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/></g><rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="SubProcess_04wrd56" style="display: block;" transform="translate(1160 494)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;"><tspan x="40.3359375" y="36.4">SIP</tspan><tspan x="9.15625" y="50.8">Security Check</tspan></text><rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/><path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/></g><rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="SubProcess_1kjfwzw" style="display: block;" transform="translate(1324 494)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;"><tspan x="8.6015625" y="43.599999999999994">(S)IP Validation</tspan></text><rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/><path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/></g><rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="BoundaryEvent_0tsbl4q" style="display: block;" transform="translate(1568 476)"><g class="djs-visual"><circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 1px; fill: white; stroke-dasharray: 6; stroke-linecap: round; fill-opacity: 1;"/><circle cx="18" cy="18" r="15" style="stroke: black; stroke-width: 1px; fill: none; stroke-dasharray: 6; stroke-linecap: round;"/><path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: white; stroke-width: 1px; stroke: black;"/></g><rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="BoundaryEvent_0dxt878" style="display: block;" transform="translate(913 476)"><g class="djs-visual"><circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 1px; fill: white; stroke-dasharray: 6; stroke-linecap: round; fill-opacity: 1;"/><circle cx="18" cy="18" r="15" style="stroke: black; stroke-width: 1px; fill: none; stroke-dasharray: 6; stroke-linecap: round;"/><path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: white; stroke-width: 1px; stroke: black;"/></g><rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="BoundaryEvent_1rf9q11" style="display: block;" transform="translate(1077 476)"><g class="djs-visual"><circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 1px; fill: white; stroke-dasharray: 6; stroke-linecap: round; fill-opacity: 1;"/><circle cx="18" cy="18" r="15" style="stroke: black; stroke-width: 1px; fill: none; stroke-dasharray: 6; stroke-linecap: round;"/><path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: white; stroke-width: 1px; stroke: black;"/></g><rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="BoundaryEvent_1u1rghm" style="display: block;" transform="translate(597 476)"><g class="djs-visual"><circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 1px; fill: white; stroke-dasharray: 6; stroke-linecap: round; fill-opacity: 1;"/><circle cx="18" cy="18" r="15" style="stroke: black; stroke-width: 1px; fill: none; stroke-dasharray: 6; stroke-linecap: round;"/><path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: white; stroke-width: 1px; stroke: black;"/></g><rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="EndEvent_0khm20q_label" style="display: block;" transform="translate(1625 550)"><g class="djs-visual"><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(0, 0, 0);"><tspan x="0" y="9.899999999999999">SIP ready</tspan><tspan x="2.1171875" y="23.099999999999998">to submit</tspan></text></g><rect x="0" y="0" width="49" height="27" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="61" height="39" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="EndEvent_128u848_label" style="display: block;" transform="translate(1617 620)"><g class="djs-visual"><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(0, 0, 0);"><tspan x="0" y="9.899999999999999">SIP removed</tspan></text></g><rect x="0" y="0" width="64" height="14" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="76" height="26" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="BoundaryEvent_1uy9lax" style="display: block;" transform="translate(1242 476)"><g class="djs-visual"><circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 1px; fill: white; stroke-dasharray: 6; stroke-linecap: round; fill-opacity: 1;"/><circle cx="18" cy="18" r="15" style="stroke: black; stroke-width: 1px; fill: none; stroke-dasharray: 6; stroke-linecap: round;"/><path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: white; stroke-width: 1px; stroke: black;"/></g><rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape selected" data-element-id="BoundaryEvent_15j6hq3" style="display: block;" transform="translate(1406 476)"><g class="djs-visual"><circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 1px; fill: white; stroke-dasharray: 6; stroke-linecap: round; fill-opacity: 1;"/><circle cx="18" cy="18" r="15" style="stroke: black; stroke-width: 1px; fill: none; stroke-dasharray: 6; stroke-linecap: round;"/><path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: white; stroke-width: 1px; stroke: black;"/></g><rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/></g></g><g class="djs-drag-group" style="pointer-events: none;" transform="translate(113 -156)"/><g class="djs-drag-group" style="pointer-events: none;" transform="translate(0 0)"/><g class="djs-drag-group" style="pointer-events: none;" transform="translate(-18 0)"/></svg>
+  </header>
+
+  <!--Agreement Grid Section -->
+  <section class="portfolio" id="pre-agreement">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Agreement Processing</h2>
+      <hr class="pre-agreement-icon mb-5">
+	
+      <div class="row">
+ <div class="col-md-6 col-lg-12">
+ <p class="mb-5" style="font-size: 1.5em;"> The first mandatory responsibility as stated in the OAIS reference model is to <em>negotiate</em> for and accept appropriate information from information Producers.
+ This is done by the means of a <strong>Submission Agreement:</strong> The agreement reached between an OAIS(Archive) and the Producer that
+specifies a data model, and <em>any other arrangements needed</em>, for the Data Submission Session.
+This data model identifies format/contents and the logical constructs used by the Producer
+and how they are represented on each media delivery or in a telecommunication session. 
+ </p>
+ 
+ </div>
+ 
+ <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#agreement-modal-1">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+		
+			
+			<div style="background:#006080; height: 254px; width: 100%; display: table;color:#ffffff">
+			
+			<div style="display: table-cell; vertical-align: middle; text-align: center;">
+			<h3>Pre-Agreement</h3>
+			<br>
+		    
+			 <img src="img/bpmn/agreement_a.svg">
+              
+            
+			  </div>
+
+			</div>
+
+          </a>
+        </div>
+		
+		 <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#agreement-modal-2">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+		
+			
+			<div style="background:#70b4d0; height: 254px; width: 100%; display: table;color:#ffffff">
+			
+			<div style="display: table-cell; vertical-align: middle; text-align: center;">
+			<h3>Transfer Agreement</h3>
+			<br>
+		    
+			 <img src="img/bpmn/agreement_b.svg">
+              
+            
+			  </div>
+
+			</div>
+
+          </a>
+        </div>
+			 <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#agreement-modal-3">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+		
+			
+			<div style="background:#006080; height: 254px; width: 100%; display: table;color:#ffffff">
+			
+			<div style="display: table-cell; vertical-align: middle; text-align: center;">
+			<h3>Data Selection</h3>
+			<br>
+		    
+			 <img src="img/bpmn/agreement_c.svg">
+              
+            
+			  </div>
+
+			</div>
+
+          </a>
+        </div>
+        
+       
+        
+  </section>
+<!-- Data Extraction Grid Section -->
+  <section class="portfolio" id="data-extraction">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Data Extraction</h2>
+      <hr class="extract-icon mb-5">
+	
+      <div class="row">
+	   <div class="col-md-6 col-lg-12">
+       
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+               
+              </div>
+            </div>
+		
+
+<center class="fill"><img src="img/bpmn/data_extraction.svg"></center>
+
+			</div>
+			<div class="col-md-6 col-lg-12">
+			 <p class="mb-5" style="font-size: 1.5em;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta</p>
+			 </div>
+	 
+ 
+ 
+       
+        <div class="col-md-6 col-lg-12">
+          <a class="portfolio-item d-block mx-auto" href="#data-extraction-modal-2">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+		
+			
+			<div style="background:#006080; height: 254px; width: 100%; display: table;color:#ffffff">
+			
+			<div style="display: table-cell; vertical-align: middle; text-align: center;">
+			<h3>External Tools</h3>
+			<br>
+		    
+			 <i class="fas fa-tools fa-7x "></i>
+              
+        
+			  </div>
+
+			</div>
+
+          </a>
+        </div>
+		     
+        
+  </section>
+  <!-- Prepare IP Grid Section -->
+  <section class="portfolio" id="prepare-ip">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Prepare IP</h2>
+      <hr class="open-box-icon mb-5">
+	
+      <div class="row">
+	   <div class="col-md-12 col-lg-12">
+       
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+               
+              </div>
+            </div>
+				<center><img class="fill" src="img/bpmn/prepare_ip.svg"></center>
+			</div>
+			<div class="col-md-6 col-lg-12">
+			 <p class="mb-5" style="font-size: 1.5em;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta</p>
+			 </div>
+	  <div class="col-md-6 col-lg-12">
+          <a class="portfolio-item d-block mx-auto" href="#prepare-ip-modal-1">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+			<div style="background:#70b4d0; height: 254px; width: 100%; display: table;color:#ffffff">	
+			<div style="display: table-cell; vertical-align: middle; text-align: center;">
+			<h3>ETP Guide</h3>
+			<br>
+		     <i class="fas fa-laptop fa-7x"></i>
+			  </div>
+			</div>
+          </a>
+        </div>
+ 
+    
+  </section>
+  
+    </section>
+  <!-- Create SIP Grid Section -->
+  <section class="portfolio" id="create-sip">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Create SIP</h2>
+      <hr class="archive-icon mb-5">
+	
+      <div class="row">
+	   <div class="col-md-12 col-lg-12">
+       
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+               
+              </div>
+            </div>
+				<center><img class="fill" src="img/bpmn/create_sip.svg"></center>
+			</div>
+			<div class="col-md-6 col-lg-12">
+			 <p class="mb-5" style="font-size: 1.5em;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta</p>
+			 </div>
+		 <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#agreement-modal-1">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+		
+			
+			<div style="background:#006080; height: 254px; width: 100%; display: table;color:#ffffff">
+			
+			<div style="display: table-cell; vertical-align: middle; text-align: center;">
+			<h3>Cleanup IP</h3>
+			<br>
+		    
+			 <img src="img/bpmn/cleanup_col.svg">
+              
+            
+			  </div>
+
+			</div>
+
+          </a>
+        </div>	
+	  <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#prepare-ip-modal-1">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+			<div style="background:#70b4d0; height: 254px; width: 100%; display: table;color:#ffffff">	
+			<div style="display: table-cell; vertical-align: middle; text-align: center;">
+			<h3>ETP Guide</h3>
+			<br>
+		     <i class="fas fa-laptop fa-7x"></i>
+			  </div>
+			</div>
+          </a>
+        </div>
+		<div class="col-md-6 col-lg-4">
+          <a class="d-block mx-auto js-scroll-trigger" href="#sip-validation">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+              
+              </div>
+            </div>
+		
+			
+			<div style="background:#006080; height: 254px; width: 100%; display: table;color:#ffffff">
+			
+			<div style="display: table-cell; vertical-align: middle; text-align: center;">
+			<h3>(S)IP Validation</h3>
+			<br>
+		    
+			 <img src="img/bpmn/val_col.svg">
+              
+            
+			  </div>
+
+			</div>
+
+          </a>
+        </div>	
+ 
+ 
+       
+ 
+		     
+        
+  </section>
+  
+  <!-- Create SIP Security Section -->
+  <section class="portfolio" id="sip-security-check">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">SIP Security Check</h2>
+      <hr class="shield-icon mb-5">
+	
+      <div class="row">	
+	   <div class="col-md-12 col-lg-12">
+       
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+               
+              </div>
+            </div>
+				<center><img class="fill" src="img/bpmn/sip_security_test.svg"></center>
+			</div>
+			<div class="col-md-6 col-lg-12">
+			 <p class="mb-5" style="font-size: 1.5em;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta</p>
+			 </div>
+		 
+ 
+		     
+        
+  </section>
+  <!-- SIP Validation Section -->
+  <section class="portfolio" id="sip-validation">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">(S)IP Validation</h2>
+      <hr class="valid-icon mb-5">
+	
+      <div class="row">	
+	   <div class="col-md-12 col-lg-12">
+       
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+               
+              </div>
+            </div>
+				<center><img class="fill" src="img/bpmn/ip_validation.svg"></center>
+			</div>
+			<div class="col-md-6 col-lg-12">
+			 <p class="mb-5" style="font-size: 1.5em;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta</p>
+			 </div>
+		
+	  <div class="col-md-6 col-lg-12">
+          <a class="portfolio-item d-block mx-auto" href="#prepare-ip-modal-1">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+			<div style="background:#70b4d0; height: 254px; width: 100%; display: table;color:#ffffff">	
+			<div style="display: table-cell; vertical-align: middle; text-align: center;">
+			<h3>ETP Guide</h3>
+			<br>
+		     <i class="fas fa-laptop fa-7x"></i>
+			  </div>
+			</div>
+          </a>
+        </div>
+		
+
+  </section>
+  
+   <!-- Submit SIP Section -->
+  <section class="portfolio" id="submit-sip">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Submit SIP</h2>
+      <hr class="submit-sip-icon mb-5">
+	
+      <div class="row">	
+	   <div class="col-md-12 col-lg-12">
+       
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+               
+              </div>
+            </div>
+				<center><img class="fill" src="img/bpmn/submit_sip.svg"></center>
+			</div>
+		
+	  <div class="col-md-6 col-lg-12">
+          <a class="portfolio-item d-block mx-auto" href="#prepare-ip-modal-1">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+			<div style="background:#70b4d0; height: 254px; width: 100%; display: table;color:#ffffff">	
+			<div style="display: table-cell; vertical-align: middle; text-align: center;">
+			<h3>ETP Guide</h3>
+			<br>
+		     <i class="fas fa-laptop fa-7x"></i>
+			  </div>
+			</div>
+          </a>
+        </div>
+
+
+  </section>
+
+
+ 
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Contact</h4>
+          <p class="lead mb-0">Björn Skog
+            <br>bjorn(at)essolutions.se</p>
+        </div>
+       
+        <div class="col-md-4">
+          <h4 class="text-uppercase mb-4">About ETP</h4>
+          <p class="lead mb-0">ESSArch tools for producers is a free to use, open source pre-ingest tool created by
+            <a href="http://essolutions.se">ES Solutions</a>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>&copy; ES Solutions 2019</small>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Modals -->
+
+  <!-- Agreement-modal-1 -->
+  <div class="portfolio-modal mfp-hide" id="agreement-modal-1">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Pre-Agreement Processing</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/bpmn/pre_agreement.svg" alt="">
+			<p style="font-size: 1.5em;">This task can be seen as equivalent to the preliminary phase of PAIMAS </p>
+            <p style="font-size: 1.5em;">Negotiations between producers and the archive management results in agreements for preservation principles, technical tolerances, package structures, processes and regulations. It also identifies, defines and quantifies organisational needs as well as how everything should be financed. Delivery from this function is a Submission Agreement and requirements interpreted into preservation planning and regulations management</p>
+            
+			<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              
+              Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agreement-modal-2 -->
+  <div class="portfolio-modal mfp-hide" id="agreement-modal-2">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Define Transfer Project Profile</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/bpmn/transfer_agreement.svg" alt="">
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+           
+			<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              <i class="fa fa-close"></i>
+              Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agreement-modal-3 -->
+  <div class="portfolio-modal mfp-hide" id="agreement-modal-3">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Prepare Data Selection Profile</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/bpmn/dsp.svg" alt="">
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              
+              Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- Prepare-ip-modal-1 -->
+  <div class="portfolio-modal mfp-hide" id="prepare-ip-modal-1">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+		<center><img src="img/bpmn/prepare_ip.svg"></center>
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Prepare IP</h2>
+            <hr class="star-dark mb-5">
+			
+            
+            <p class="mb-5" style="font-size: 1.5em;"> This section lists links to helpful standards and best practice for negotiating submission agreements</p>
+            
+			<p><a target="blank" href="https://public.ccsds.org/Pubs/651x0m1.pdf">Producer-Archive Interface Methodology Abstract Standard <strong>(PAIMAS) CCSDS 651.0-M </strong> <em>(English)</em></a></p>
+			<p><a target="blank" href="https://riksarkivet.se/Media/pdf-filer/Projekt/Leveranshandledning.pdf">Leveranshandledning (project eARD)<em>(Swedish)</em></a></p>
+			
+			
+			<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+
+              Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.js"></script>
+    	  <script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+</body>
+
+</html>
